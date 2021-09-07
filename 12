@@ -1,0 +1,37 @@
+int main()
+{
+	setlocale(LC_ALL, "RUS");
+	
+	double c, b, x,c1,d,a1,b1;
+	
+	
+	int number;
+	cout << "Хотите ввести свои значения: (1 - да 2 - нет)" << endl; // 1 = Ввод своих чисел, 2 = рандомные числа
+
+	cin >> number;
+	if (number == 1)
+	{
+		cout << "Введите числа: c, b" << endl;
+
+		cin >> c >> b;
+	}
+
+	else if (number == 2) 
+	{
+      c = 0 + rand() % 100;
+	  b = 0 + rand() % 100;
+	}
+
+	
+	x = (5 / 2) * (b + pow(c, 2));                                               
+
+	a1 = sin (abs(c * x + b));
+	b1 = pow (b * pow(x, 3) + c * pow(x, 2) + x, 2) + 1;
+	c1 = tan (c * x + b + pow(x, 2) + 7 );
+	
+	d = abs(a1 / sqrt(b1)) + c1;
+
+	cout << "Ответ: " << d << endl;
+
+	return 0;
+}
